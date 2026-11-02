@@ -32,6 +32,12 @@
   <symbol id="i-lock" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 10V7.5a5 5 0 0 1 10 0V10h.5A1.5 1.5 0 0 1 19 11.5v8a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 19.5v-8A1.5 1.5 0 0 1 6.5 10H7Zm2 0h6V7.5a3 3 0 0 0-6 0V10Z"/></symbol>
   <symbol id="i-doc" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M6.5 2.5h7.2a1.5 1.5 0 0 1 1.06.44l3.8 3.8A1.5 1.5 0 0 1 19 7.8V20a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 20V4a1.5 1.5 0 0 1 1.5-1.5ZM8 11h8v1.6H8V11Zm0 4h8v1.6H8V15Z"/></symbol>
   <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.6 2.2 4.9 13.1a.8.8 0 0 0 .63 1.3H11l-.9 7a.4.4 0 0 0 .7.3l8.7-10.9a.8.8 0 0 0-.63-1.3H13.4l.9-7a.4.4 0 0 0-.7-.3Z"/></symbol>
+  <symbol id="i-outdoor" viewBox="0 0 24 24"><path d="M3 4h18v12H3zM7 16v5m10-5v5M7 8h10M7 12h6"/></symbol>
+  <symbol id="i-tv" viewBox="0 0 24 24"><path d="M3 7h18v13H3zM8 2l4 5 4-5M9 11l6 3-6 3z"/></symbol>
+  <symbol id="i-radio" viewBox="0 0 24 24"><path d="M3 8h18v12H3zM5 8l13-6M6 12h6m-6 4h3"/><circle cx="16.5" cy="14.5" r="2.5"/></symbol>
+  <symbol id="i-olv" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8h18M9 11l6 3-6 3z"/></symbol>
+  <symbol id="i-search-chart" viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6M6 12l3-4 3 2 2-4"/></symbol>
+  <symbol id="i-ai-chat" viewBox="0 0 24 24"><path d="M4 3h16v14H9l-5 4V3Zm8 3 1.3 3.7L17 11l-3.7 1.3L12 16l-1.3-3.7L7 11l3.7-1.3L12 6Z"/></symbol>
   <symbol id="i-laurel" viewBox="0 0 28 44">
     <path d="M24 42C10 36 4 22 9 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
     <ellipse cx="5.2" cy="9.5" rx="2.1" ry="4.6" transform="rotate(-24 5.2 9.5)"/>
@@ -172,31 +178,63 @@
 </section>
 
 <!-- ============ Маркетинг для брендов ============ -->
-<section class="section" id="marketing">
-  <div class="section__head">
-    <h2 class="section__title section__title--main">Маркетинг для брендов</h2>
-  </div>
-  <div class="bento bento--even bento--marketing">
-    <div class="bento__main reveal">
-      <div class="bento__body">
-        <h3 class="bento__title">Разработка маркетинговых стратегий</h3>
-        <p class="bento__text">Определяем аудиторию, позиционирование и&nbsp;направления продвижения бренда.</p>
-        <div class="bento__actions">
-          <button class="btn btn--md bento__button" type="button" data-modal-open="request">Обсудить задачу</button>
-        </div>
-      </div>
+<section class="section" id="marketing" aria-labelledby="marketing-title">
+  <div class="marketing">
+    <div class="marketing__intro">
+      <p class="section__kicker">Стратегия и&nbsp;исследования</p>
+      <h2 class="section__title section__title--main" id="marketing-title">Маркетинг для брендов</h2>
+      <p class="marketing__lead">Помогаем понять клиентов, рынок и&nbsp;конкурентов, чтобы выбрать направление развития и&nbsp;выстроить продвижение бренда.</p>
+      <button class="btn btn--md marketing__button" type="button" data-modal-open="request">Обсудить задачу</button>
     </div>
-    <div class="bento__main reveal">
-      <div class="bento__body">
-        <h3 class="bento__title">Маркетинговые исследования</h3>
-        <ul class="bento__research">
-          <li class="product__point">Глубинные интервью (кастдевы)</li>
-          <li class="product__point">Исследования маркетинга конкурентов</li>
-          <li class="product__point">Исследования рынка</li>
-          <li class="product__point">Тайный клиент</li>
-          <li class="product__point">Формирование клиентского пути</li>
-        </ul>
-      </div>
+    <div class="marketing__services">
+      <details class="marketing__item" open>
+        <summary class="marketing__summary">
+          <span class="marketing__number" aria-hidden="true">01</span>
+          <h3 class="marketing__name">Разработка маркетинговых стратегий</h3>
+          <svg class="icon icon--stroke marketing__toggle" aria-hidden="true"><use href="#i-plus"></use></svg>
+        </summary>
+        <p class="marketing__description">Определяем аудиторию, позиционирование и направления продвижения бренда. Формируем план действий с каналами, бюджетом и KPI.</p>
+      </details>
+      <details class="marketing__item">
+        <summary class="marketing__summary">
+          <span class="marketing__number" aria-hidden="true">02</span>
+          <h3 class="marketing__name">Глубинные интервью (кастдевы)</h3>
+          <svg class="icon icon--stroke marketing__toggle" aria-hidden="true"><use href="#i-plus"></use></svg>
+        </summary>
+        <p class="marketing__description">Выясняем, как клиенты выбирают продукт, что для них важно и что мешает покупке. Находим мотивы и барьеры для доработки предложения.</p>
+      </details>
+      <details class="marketing__item">
+        <summary class="marketing__summary">
+          <span class="marketing__number" aria-hidden="true">03</span>
+          <h3 class="marketing__name">Исследования маркетинга конкурентов</h3>
+          <svg class="icon icon--stroke marketing__toggle" aria-hidden="true"><use href="#i-plus"></use></svg>
+        </summary>
+        <p class="marketing__description">Изучаем позиционирование, предложения, цены и каналы продвижения конкурентов. Определяем, чем бренд может выделиться.</p>
+      </details>
+      <details class="marketing__item">
+        <summary class="marketing__summary">
+          <span class="marketing__number" aria-hidden="true">04</span>
+          <h3 class="marketing__name">Исследования рынка</h3>
+          <svg class="icon icon--stroke marketing__toggle" aria-hidden="true"><use href="#i-plus"></use></svg>
+        </summary>
+        <p class="marketing__description">Анализируем рынок, его динамику и тенденции. Находим возможности для развития продукта и продвижения.</p>
+      </details>
+      <details class="marketing__item">
+        <summary class="marketing__summary">
+          <span class="marketing__number" aria-hidden="true">05</span>
+          <h3 class="marketing__name">Тайный клиент</h3>
+          <svg class="icon icon--stroke marketing__toggle" aria-hidden="true"><use href="#i-plus"></use></svg>
+        </summary>
+        <p class="marketing__description">Проверяем путь обращения и качество обслуживания глазами покупателя. Выявляем барьеры и точки потери клиентов.</p>
+      </details>
+      <details class="marketing__item">
+        <summary class="marketing__summary">
+          <span class="marketing__number" aria-hidden="true">06</span>
+          <h3 class="marketing__name">Формирование клиентского пути</h3>
+          <svg class="icon icon--stroke marketing__toggle" aria-hidden="true"><use href="#i-plus"></use></svg>
+        </summary>
+        <p class="marketing__description">Описываем этапы от знакомства с брендом до покупки. Определяем точки контакта и возможности улучшить клиентский опыт.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -437,7 +475,7 @@
 <section class="section section--panel" id="aired">
   <div class="section__head">
     <p class="section__kicker">ТВ-эфир</p>
-    <h2 class="section__title">Ролики, которые уже вышли в&nbsp;эфир</h2>
+    <h2 class="section__title">Ролики, которые уже вышли на&nbsp;ТВ</h2>
     <div class="section__arrows">
         <button class="arrow arrow--prev" type="button" data-slider-prev aria-label="Ролики в эфире: назад"><svg class="icon icon--stroke arrow__icon" aria-hidden="true"><use href="#i-chevron"></use></svg></button>
         <button class="arrow" type="button" data-slider-next aria-label="Ролики в эфире: вперёд"><svg class="icon icon--stroke arrow__icon" aria-hidden="true"><use href="#i-chevron"></use></svg></button>
@@ -450,7 +488,10 @@
           <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="«Наш Лецитин»" data-video="video/nash-lecitin.mp4" data-preview="video/preview/nash-lecitin.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Наш Лецитин»">
               <img class="case__poster" src="img/cases/nash-lecitin.jpg" alt="«Наш Лецитин»: тв-ролик для бренда бадов" width="960" height="540" loading="lazy">
-              <span class="case__badge">AI</span>
+              <span class="case__badges">
+                <span class="case__badge">AI</span>
+              </span>
+              <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
               <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:15</span>
             </button>
             <h3 class="case__title">«Наш Лецитин»</h3>
@@ -462,7 +503,10 @@
           <article class="case" data-case data-kind="Съёмка" data-title="«Каравай Кубани»" data-video="video/karavay-kubani.mp4" data-preview="video/preview/karavay-kubani.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Каравай Кубани»">
               <img class="case__poster" src="img/cases/karavay-kubani.jpg" alt="«Каравай Кубани»: имиджевый ролик о хлебе «деревенский»" width="960" height="540" loading="lazy">
-              <span class="case__badge">Съёмка</span>
+              <span class="case__badges">
+                <span class="case__badge">Съёмка</span>
+              </span>
+              <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
               <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:30</span>
             </button>
             <h3 class="case__title">«Каравай Кубани»</h3>
@@ -473,7 +517,10 @@
           <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="«Сахалин»" data-video="video/sakhalin.mp4" data-preview="video/preview/sakhalin.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Сахалин»">
               <img class="case__poster" src="img/cases/sakhalin.jpg" alt="«Сахалин»: тв-ролик для магазина морепродуктов" width="960" height="540" loading="lazy">
-              <span class="case__badge">AI</span>
+              <span class="case__badges">
+                <span class="case__badge">AI</span>
+              </span>
+              <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
               <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
             </button>
             <h3 class="case__title">«Сахалин»</h3>
@@ -485,7 +532,10 @@
           <article class="case" data-case data-kind="Съёмка" data-title="Васюринский мясокомбинат" data-video="video/vasyurinskiy.mp4" data-preview="video/preview/vasyurinskiy.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: Васюринский мясокомбинат">
               <img class="case__poster" src="img/cases/vasyurinskiy.jpg" alt="Васюринский мясокомбинат: тв-ролик для региональных окон федеральных каналов" width="960" height="540" loading="lazy">
-              <span class="case__badge">Съёмка</span>
+              <span class="case__badges">
+                <span class="case__badge">Съёмка</span>
+              </span>
+              <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
               <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:30</span>
             </button>
             <h3 class="case__title">Васюринский мясокомбинат</h3>
@@ -496,7 +546,10 @@
           <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="«Ёлкин Матрас»" data-video="video/elkin-matras.mp4" data-preview="video/preview/elkin-matras.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Ёлкин Матрас»">
               <img class="case__poster" src="img/cases/elkin-matras.jpg" alt="«Ёлкин Матрас»: тв-реклама" width="960" height="540" loading="lazy">
-              <span class="case__badge">AI</span>
+              <span class="case__badges">
+                <span class="case__badge">AI</span>
+              </span>
+              <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
               <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
             </button>
             <h3 class="case__title">«Ёлкин Матрас»</h3>
@@ -507,7 +560,10 @@
           <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="Modern Clinic" data-video="video/modern-clinic.mp4" data-preview="video/preview/modern-clinic.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: Modern Clinic">
               <img class="case__poster" src="img/cases/modern-clinic.jpg" alt="Modern Clinic: тв-реклама клиники" width="960" height="540" loading="lazy">
-              <span class="case__badge">AI</span>
+              <span class="case__badges">
+                <span class="case__badge">AI</span>
+              </span>
+              <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
               <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
             </button>
             <h3 class="case__title">Modern Clinic</h3>
@@ -518,7 +574,10 @@
           <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="Краснодарский ипподром" data-video="video/ippodrom.mp4" data-preview="video/preview/ippodrom.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: Краснодарский ипподром">
               <img class="case__poster" src="img/cases/ippodrom.jpg" alt="Краснодарский ипподром: тв-реклама" width="960" height="540" loading="lazy">
-              <span class="case__badge">AI</span>
+              <span class="case__badges">
+                <span class="case__badge">AI</span>
+              </span>
+              <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
               <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
             </button>
             <h3 class="case__title">Краснодарский ипподром</h3>
@@ -529,7 +588,10 @@
           <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="«Аквамир»" data-video="video/aquamir-23-february.mp4" data-preview="video/preview/aquamir-23-february.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Аквамир»">
               <img class="case__poster" src="img/cases/aquamir-23-february.jpg" alt="«Аквамир»: тв-реклама к 23 февраля" width="960" height="540" loading="lazy">
-              <span class="case__badge">AI</span>
+              <span class="case__badges">
+                <span class="case__badge">AI</span>
+              </span>
+              <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
               <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
             </button>
             <h3 class="case__title">«Аквамир»</h3>
@@ -540,7 +602,10 @@
           <article class="case" data-case data-kind="AI-ролик для ТВ" data-title="«Цветы Юга»" data-video="video/tsvety-yuga-1.mp4" data-preview="video/preview/tsvety-yuga-1.mp4">
             <button class="case__media" type="button" aria-label="Смотреть ролик: «Цветы Юга»">
               <img class="case__poster" src="img/cases/tsvety-yuga-1.jpg" alt="«Цветы Юга»: тв-реклама" width="960" height="540" loading="lazy">
-              <span class="case__badge">AI</span>
+              <span class="case__badges">
+                <span class="case__badge">AI</span>
+              </span>
+              <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
               <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
             </button>
             <h3 class="case__title">«Цветы Юга»</h3>
@@ -579,9 +644,9 @@
             <div class="case__frame">
               <button class="case__media" type="button" aria-label="Смотреть ролик: «Жасмин»">
                 <img class="case__poster" src="img/cases/zhasmin.jpg" alt="«Жасмин»: рекламный ролик круп" width="960" height="540" loading="lazy">
+                <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
                 <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:25</span>
               </button>
-              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
             </div>
             <h3 class="case__title">«Жасмин»</h3>
             <p class="case__text">Съёмка · рекламный ролик круп</p>
@@ -592,9 +657,9 @@
             <div class="case__frame">
               <button class="case__media" type="button" aria-label="Смотреть ролик: «Три З»">
                 <img class="case__poster" src="img/cases/tri-z.jpg" alt="«Три З»: рекламный ролик клиники заботы о зрении" width="960" height="540" loading="lazy">
+                <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
                 <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:25</span>
               </button>
-              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
             </div>
             <h3 class="case__title">«Три З»</h3>
             <p class="case__text">Съёмка · рекламный ролик клиники заботы о зрении</p>
@@ -605,9 +670,9 @@
             <div class="case__frame">
               <button class="case__media" type="button" aria-label="Смотреть ролик: «Каравай Кубани»">
                 <img class="case__poster" src="img/cases/karavay-lakomka.jpg" alt="«Каравай Кубани»: рекламный ролик выпечки «лакомка»" width="960" height="540" loading="lazy">
+                <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
                 <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:31</span>
               </button>
-              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
             </div>
             <h3 class="case__title">«Каравай Кубани»</h3>
             <p class="case__text">Съёмка · рекламный ролик выпечки «Лакомка»</p>
@@ -618,9 +683,9 @@
             <div class="case__frame">
               <button class="case__media" type="button" aria-label="Смотреть ролик: «Кубань Инструмент»">
                 <img class="case__poster" src="img/cases/kuban-instrument.jpg" alt="«Кубань Инструмент»: рекламный ролик сети магазинов инструмента" width="960" height="540" loading="lazy">
+                <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
                 <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:15</span>
               </button>
-              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
             </div>
             <h3 class="case__title">«Кубань Инструмент»</h3>
             <p class="case__text">Съёмка · рекламный ролик сети магазинов инструмента</p>
@@ -631,9 +696,9 @@
             <div class="case__frame">
               <button class="case__media" type="button" aria-label="Смотреть ролик: «Мацеста чай»">
                 <img class="case__poster" src="img/cases/matsesta-chay.jpg" alt="«Мацеста чай»: рекламный ролик краснодарского чая" width="960" height="540" loading="lazy">
+                <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
                 <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:10</span>
               </button>
-              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
             </div>
             <h3 class="case__title">«Мацеста чай»</h3>
             <p class="case__text">Съёмка · рекламный ролик краснодарского чая</p>
@@ -644,9 +709,9 @@
             <div class="case__frame">
               <button class="case__media" type="button" aria-label="Смотреть ролик: «Каравай Кубани»">
                 <img class="case__poster" src="img/cases/karavay-5-zlakov.jpg" alt="«Каравай Кубани»: рекламный ролик хлеба «5 злаков»" width="960" height="540" loading="lazy">
+                <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
                 <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:30</span>
               </button>
-              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
             </div>
             <h3 class="case__title">«Каравай Кубани»</h3>
             <p class="case__text">Съёмка · рекламный ролик хлеба «5 злаков»</p>
@@ -657,9 +722,9 @@
             <div class="case__frame">
               <button class="case__media" type="button" aria-label="Смотреть ролик: SolaAir">
                 <img class="case__poster" src="img/cases/solaair-cube.jpg" alt="SolaAir: презентация арт-объекта «зеркальный куб»" width="960" height="540" loading="lazy">
+                <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
                 <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:47</span>
               </button>
-              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
             </div>
             <h3 class="case__title">SolaAir</h3>
             <p class="case__text">Съёмка · презентация арт-объекта «Зеркальный куб»</p>
@@ -670,9 +735,9 @@
             <div class="case__frame">
               <button class="case__media" type="button" aria-label="Смотреть ролик: «Сантехника Онлайн»">
                 <img class="case__poster" src="img/cases/santehnika-online.jpg" alt="«Сантехника Онлайн»: рекламный ролик «измени отражение»" width="960" height="540" loading="lazy">
+                <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
                 <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:21</span>
               </button>
-              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
             </div>
             <h3 class="case__title">«Сантехника Онлайн»</h3>
             <p class="case__text">Съёмка · рекламный ролик «Измени отражение»</p>
@@ -683,9 +748,9 @@
             <div class="case__frame">
               <button class="case__media" type="button" aria-label="Смотреть ролик: SolaAir">
                 <img class="case__poster" src="img/cases/solaair-lenty.jpg" alt="SolaAir: презентация арт-объекта «георгиевские ленты»" width="960" height="540" loading="lazy">
+                <span class="case__badge case__badge--tv">Вышел на&nbsp;ТВ</span>
                 <span class="case__play"><svg class="icon case__play-icon" aria-hidden="true"><use href="#i-play"></use></svg>0:47</span>
               </button>
-              <button class="case__review" type="button"><svg class="icon case__review-icon" aria-hidden="true"><use href="#i-play"></use></svg>Видеоотзыв</button>
             </div>
             <h3 class="case__title">SolaAir</h3>
             <p class="case__text">Съёмка · презентация арт-объекта «Георгиевские ленты»</p>
@@ -996,69 +1061,107 @@
 </section>
 
 <!-- ============ Медиабаинг ============ -->
-<section class="section" id="mediabuying">
+<section class="section" id="mediabuying" aria-labelledby="mediabuying-title">
   <div class="section__head">
-    <h2 class="section__title section__title--main">Медиабаинг</h2>
-    <p class="section__lead">Размещение рекламы: наружная реклама, ТВ, радио и&nbsp;онлайн-видео.</p>
+    <h2 class="section__title section__title--main" id="mediabuying-title"><svg class="icon section__mark" aria-hidden="true"><use href="#i-spark"></use></svg>Медиабаинг</h2>
   </div>
-  <div class="bento bento--mediabuying">
-    <div class="bento__main reveal">
-      <div class="bento__body">
-        <p class="section__kicker">Реклама в&nbsp;городе</p>
-        <h3 class="bento__title">Наружная реклама</h3>
-        <p class="bento__text">Подбираем рекламные поверхности и&nbsp;места размещения под вашу аудиторию и&nbsp;задачу.</p>
-        <div class="bento__actions">
-          <button class="btn btn--md bento__button" type="button" data-modal-open="request">Обсудить размещение</button>
-          <a href="https://mediaseller.agency/outdoor">Подробнее <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
+  <div class="mediabuying">
+    <div class="mediabuying__grid">
+      <a class="mediabuying__item" href="https://mediaseller.agency/outdoor">
+        <span class="mediabuying__icon-box"><svg class="icon icon--stroke mediabuying__icon" aria-hidden="true"><use href="#i-outdoor"></use></svg></span>
+        <svg class="icon icon--stroke mediabuying__arrow" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        <span class="mediabuying__name">Наружная реклама</span>
+        <span class="mediabuying__description">Рекламные поверхности в&nbsp;городе.</span>
+        <span class="mediabuying__tags">
+          <span class="mediabuying__tag">Билборды</span>
+          <span class="mediabuying__tag">Ситиборды</span>
+          <span class="mediabuying__tag">Транспорт</span>
+        </span>
+      </a>
+      <a class="mediabuying__item" href="https://mediaseller.agency/reklamanatv">
+        <span class="mediabuying__icon-box"><svg class="icon icon--stroke mediabuying__icon" aria-hidden="true"><use href="#i-tv"></use></svg></span>
+        <svg class="icon icon--stroke mediabuying__arrow" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        <span class="mediabuying__name">Реклама на&nbsp;ТВ</span>
+        <span class="mediabuying__description">Ролики в&nbsp;телевизионном эфире.</span>
+        <span class="mediabuying__tags">
+          <span class="mediabuying__tag">Федеральное</span>
+          <span class="mediabuying__tag">Регионы</span>
+          <span class="mediabuying__tag">Спонсорство</span>
+        </span>
+      </a>
+      <a class="mediabuying__item" href="https://mediaseller.agency/reklamanaradio">
+        <span class="mediabuying__icon-box"><svg class="icon icon--stroke mediabuying__icon" aria-hidden="true"><use href="#i-radio"></use></svg></span>
+        <svg class="icon icon--stroke mediabuying__arrow" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        <span class="mediabuying__name">Реклама на&nbsp;радио</span>
+        <span class="mediabuying__description">Аудиореклама на&nbsp;радиостанциях.</span>
+        <span class="mediabuying__tags">
+          <span class="mediabuying__tag">Ролики</span>
+          <span class="mediabuying__tag">Спонсорство</span>
+          <span class="mediabuying__tag">Интеграции</span>
+        </span>
+      </a>
+      <button class="mediabuying__item" type="button" data-modal-open="request">
+        <span class="mediabuying__icon-box"><svg class="icon icon--stroke mediabuying__icon" aria-hidden="true"><use href="#i-olv"></use></svg></span>
+        <svg class="icon icon--stroke mediabuying__arrow" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        <span class="mediabuying__name">Видеопрограмматик / OLV</span>
+        <span class="mediabuying__description">Видеореклама в&nbsp;интернете.</span>
+        <span class="mediabuying__tags">
+          <span class="mediabuying__tag">Pre-roll</span>
+          <span class="mediabuying__tag">Smart TV</span>
+          <span class="mediabuying__tag">Соцсети</span>
+        </span>
+      </button>
     </div>
-    <div class="bento__side">
-      <a class="bento__card reveal" href="https://mediaseller.agency/reklamanatv">
-        <h3 class="bento__title">Реклама на&nbsp;ТВ</h3>
-        <p class="bento__text">Размещение рекламных роликов в&nbsp;телевизионном эфире.</p>
-      </a>
-      <a class="bento__card reveal" href="https://mediaseller.agency/reklamanaradio">
-        <h3 class="bento__title">Реклама на&nbsp;радио</h3>
-        <p class="bento__text">Размещение аудиорекламы в&nbsp;эфире радиостанций.</p>
-      </a>
-      <div class="bento__card reveal">
-        <h3 class="bento__title">Видеопрограмматик / OLV</h3>
-        <p class="bento__text">Размещение видеорекламы в&nbsp;интернете.</p>
-        <div class="bento__actions">
-          <button class="btn bento__button" type="button" data-modal-open="request">Обсудить OLV</button>
-        </div>
+    <div class="mediabuying__intro">
+      <h3 class="mediabuying__title">Размещаем рекламу там, где ваша аудитория</h3>
+      <p class="mediabuying__lead">Подбираем площадки и&nbsp;форматы размещения под задачи вашего бренда.</p>
+      <ul class="mediabuying__steps">
+        <li class="mediabuying__step">Анализ аудитории и&nbsp;задач</li>
+        <li class="mediabuying__step">Медиаплан под бюджет</li>
+        <li class="mediabuying__step">Размещение и&nbsp;отчёт</li>
+      </ul>
+      <div class="mediabuying__actions">
+        <button class="btn btn--md mediabuying__button" type="button" data-modal-open="request">Обсудить размещение <svg class="icon icon--stroke" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ Диджитал-реклама ============ -->
-<section class="section" id="digital">
-  <div class="section__head">
-    <h2 class="section__title section__title--main">Диджитал-реклама</h2>
+<section class="section" id="digital" aria-labelledby="digital-title">
+  <div class="section__head digital__head">
+    <h2 class="section__title section__title--main" id="digital-title"><svg class="icon section__mark" aria-hidden="true"><use href="#i-spark"></use></svg>Диджитал-реклама</h2>
     <p class="section__lead">Рекламные кампании в&nbsp;Яндексе и&nbsp;VK, SEO по&nbsp;KPI и&nbsp;продвижение в&nbsp;нейросетях.</p>
   </div>
-  <div class="bento bento--digital">
-    <div class="bento__main reveal">
-      <div class="bento__body">
+  <div class="digital">
+    <div class="digital__main">
+      <div class="digital__body">
         <p class="section__kicker">Рекламные кампании</p>
-        <h3 class="bento__title">Яндекс и&nbsp;VK Реклама</h3>
-        <p class="bento__text">Запускаем рекламные кампании под задачи вашего бизнеса.</p>
-        <div class="bento__actions">
-          <button class="btn btn--md bento__button" type="button" data-modal-open="request">Обсудить продвижение</button>
-        </div>
+        <h3 class="digital__title">Яндекс и&nbsp;VK Реклама</h3>
+        <p class="digital__text">Запускаем рекламные кампании под задачи вашего бизнеса.</p>
+        <ul class="digital__tags" aria-label="Форматы рекламных кампаний">
+          <li class="digital__tag">Поиск</li>
+          <li class="digital__tag">РСЯ</li>
+          <li class="digital__tag">Таргет VK</li>
+          <li class="digital__tag">Ретаргетинг</li>
+        </ul>
+        <button class="btn btn--md digital__button" type="button" data-modal-open="request">Обсудить продвижение <svg class="icon icon--stroke" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
       </div>
+      <img class="digital__image" src="img/didggital.png" alt="Пример рекламной выдачи, объявления бренда и графика заявок" width="1207" height="1303" loading="lazy">
     </div>
-    <div class="bento__side">
-      <div class="bento__card reveal">
-        <h3 class="bento__title">SEO по&nbsp;KPI</h3>
-        <p class="bento__text">Продвижение сайта в&nbsp;поиске с&nbsp;ориентиром на&nbsp;согласованные показатели.</p>
-      </div>
-      <div class="bento__card reveal">
-        <h3 class="bento__title">Продвижение в&nbsp;нейросетях</h3>
-        <p class="bento__text">Работа над присутствием бренда в&nbsp;ответах нейросетей.</p>
-      </div>
+    <div class="digital__side">
+      <button class="digital__card" type="button" data-modal-open="request">
+        <span class="digital__icon-box"><svg class="icon icon--stroke digital__icon" aria-hidden="true"><use href="#i-search-chart"></use></svg></span>
+        <svg class="icon icon--stroke digital__arrow" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        <span class="digital__name">SEO по&nbsp;KPI</span>
+        <span class="digital__text">Продвижение сайта в&nbsp;поиске с&nbsp;ориентиром на&nbsp;согласованные показатели.</span>
+      </button>
+      <button class="digital__card" type="button" data-modal-open="request">
+        <span class="digital__icon-box"><svg class="icon icon--stroke digital__icon" aria-hidden="true"><use href="#i-ai-chat"></use></svg></span>
+        <svg class="icon icon--stroke digital__arrow" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        <span class="digital__name">Продвижение в&nbsp;нейросетях</span>
+        <span class="digital__text">Работа над присутствием бренда в&nbsp;ответах нейросетей.</span>
+      </button>
     </div>
   </div>
 </section>

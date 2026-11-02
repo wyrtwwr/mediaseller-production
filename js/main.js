@@ -17,6 +17,7 @@
   initPlayer();
   initRequestModal();
   initFaq();
+  initMarketing();
   initForms();
   initReveal();
   initAutoplay();
@@ -634,6 +635,50 @@
           playing.catch(function () {});
         }
       }
+    });
+  }
+
+  function initMarketing() {
+    if (reduceMotion || !('animate' in document.documentElement)) {
+      return;
+    }
+
+    toArray(document.querySelectorAll('.marketing__item')).forEach(function (item) {
+      var summary = item.querySelector('.marketing__summary');
+      var expanded = item.open;
+      var animation = null;
+
+      summary.addEventListener('click', function (event) {
+        event.preventDefault();
+        var startHeight = item.getBoundingClientRect().height;
+        expanded = !expanded;
+
+        if (animation) {
+          animation.cancel();
+        }
+
+        item.open = true;
+        item.classList.toggle('is-closing', !expanded);
+        var endHeight = expanded ? item.getBoundingClientRect().height :
+          summary.getBoundingClientRect().height + item.offsetHeight - item.clientHeight;
+
+        item.classList.add('is-animating');
+        animation = item.animate([
+          { height: startHeight + 'px' },
+          { height: endHeight + 'px' }
+        ], {
+          duration: 380,
+          easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+          fill: 'both'
+        });
+
+        animation.onfinish = function () {
+          item.open = expanded;
+          item.classList.remove('is-animating', 'is-closing');
+          animation.cancel();
+          animation = null;
+        };
+      });
     });
   }
 
